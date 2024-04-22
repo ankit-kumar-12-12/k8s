@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-gitlab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-app-gitlab
+  template:
+    metadata:
+      labels:
+        app: node-app-gitlab
+    spec:
+      imagePullSecrets:
+      - name: my-registry-secret
+      containers:
+      - name: node-app-gitlab
+        image: registry.gitlab.com/docker9880915/docker-node/node_v:1.0
+        ports:
+        - containerPort: 5000

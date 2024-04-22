@@ -1,0 +1,46 @@
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+
+---------------------------------------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-app
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      containers:
+      - name: node-app
+        #image: ankit12121999/node_v:latest
+        ports:
+        - containerPort: 5000
+
+------------------------------------------------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-app-service
+spec:
+  type: NodePort
+  selector:
+    app: node-app
+  ports:
+    - protocol: TCP
+      port: 80  # Exposed port on the Service
+      targetPort: 5000  # Port on your application container
+      nodePort: 30000  # Optional: specify a specific port, or let Kubernetes assign one
+
+      
+------------------------------------------------------
+------------------------------------------------------
+
+-->with gitlab 
