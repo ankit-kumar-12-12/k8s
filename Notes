@@ -1,0 +1,13 @@
+--To get the process id of nginx serrver
+ps aux | grep '[n]ginx' | sort -n -k 2 | head -n 1 | awk '{print $2}'
+
+--lsns -p (process_id) that we geht from above command 
+
+daemon off =   
+In Docker, running a process in the foreground means the process is the main task of the container and keeps the container alive as long as it runs. For example:
+dockerfile
+   CMD ["nginx", "-g", "daemon off;"]
+This command keeps Nginx running in the foreground so that the Docker container remains active as long as Nginx is running.
+
+--cd sys/fs/cgroup/memory/system.slice/docker
+get the exact memory that we given to container   
