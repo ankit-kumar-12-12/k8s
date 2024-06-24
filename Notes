@@ -22,3 +22,28 @@ tools --> kubadm kops ksctl --these helps in creating k8s cluster (self managed 
          kubectl kubelet    --these helps to interact with cluster(command line utility)
 
 --cat ~/.kube/config  config file were we know how we are communicating with our cluster (home directory/kube/config
+
+----------------------------------------------------------------------
+### kube config File ### kubectl config view 
+1.clusters -- gives cluster details
+2.users -- list of users (credentials) which provide how to communicat with cluster
+3.context -- in context we define which user communicate with which cluster 
+
+--kubectl config get-context  gives the list of context * one is the current one
+--kubectl config use-context <name of the context>
+
+export KUBECONFIG = path to your config file
+or we can use kubectl get nodes --kubeconfig ~/.kube/config 
+
+if we have multiple config files 
+export KUBECONFIG =/path/to/first/config:/path/to/second/config:/path/to/third/config
+
+or we can use kubectx (use to change the contex)
+
+
+
+
+
+
+
+
