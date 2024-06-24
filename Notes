@@ -19,4 +19,6 @@ get the exact memory that we given to container
 
 --k8s ==> cluster ==> control plane
 tools --> kubadm kops ksctl --these helps in creating k8s cluster (self managed k8s cluster)
-         kubectl kubelet    --these helps to interact with cluster
+         kubectl kubelet    --these helps to interact with cluster(command line utility)
+
+--cat ~/.kube/config  config file were we know how we are communicating with our cluster (home directory/kube/config
