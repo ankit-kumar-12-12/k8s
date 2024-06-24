@@ -11,3 +11,12 @@ This command keeps Nginx running in the foreground so that the Docker container 
 
 --cd sys/fs/cgroup/memory/system.slice/docker
 get the exact memory that we given to container   
+
+--vm containers/linux container/windows containers
+
+
+---------------------------------------------------------------------
+
+--k8s ==> cluster ==> control plane
+tools --> kubadm kops ksctl --these helps in creating k8s cluster (self managed k8s cluster)
+         kubectl kubelet    --these helps to interact with cluster
