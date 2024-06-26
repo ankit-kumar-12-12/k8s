@@ -52,6 +52,11 @@ or we can use kubectx (use to change the contex)
 spec.os.name -- windows or linux  
 
 
+----------------------------------------------------------------------------
+Init Container
+
+
+
 
 
 
