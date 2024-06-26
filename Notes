@@ -55,7 +55,7 @@ spec.os.name -- windows or linux
 
 ----------------------------------------------------------------------------
 Init Container
-
+   Run till completion 
 
 
 
