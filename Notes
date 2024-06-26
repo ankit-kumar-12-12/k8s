@@ -41,6 +41,16 @@ export KUBECONFIG =/path/to/first/config:/path/to/second/config:/path/to/third/c
 or we can use kubectx (use to change the contex)
 
 
+--Pod lifecycle 
+   Pendig : Find the node waiting for pv to be ready and pvc to bound to it
+   ContainerCreating : pulling image, starting it, attaching it
+   Running : 
+   Error
+   Crashloopbackoff : process dying too many times
+   Succeeded: job done
+
+spec.os.name -- windows or linux  
+
 
 
 
