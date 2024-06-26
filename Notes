@@ -63,6 +63,9 @@ spec.os.name -- windows or linux
       init init init(with restart policy always)  main container
    side car containers are used to help main container for log collecting, as a proxy, to communicate with other pods
 
+{learn probes}
+*pause container hold the ip of pod    
+
 
 
 
