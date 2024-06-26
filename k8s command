@@ -1,0 +1,6 @@
+--kubectl get nodes
+--kubectl get pods
+--kubectl get pods -n <name-space>        kubectl create ns <name-space-name>
+--kubectl describe pod
+--kubectl get pods -o wide {gives more detail like on which node ip ..}
+--kubectl get pods -o yaml
