@@ -54,9 +54,14 @@ spec.os.name -- windows or linux
 
 
 ----------------------------------------------------------------------------
-Init Container
-   Run till completion 
+--Init Container(part3)
+   Run till completion
+   Can be use to check db is up and runnig ...
 
+--Side Car Container
+   ==>1    2    3                                 4
+      init init init(with restart policy always)  main container
+   side car containers are used to help main container for log collecting, as a proxy, to communicate with other pods
 
 
 
