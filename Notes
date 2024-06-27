@@ -66,8 +66,10 @@ spec.os.name -- windows or linux
 {learn probes}
 *pause container hold the ip of pod    
 
+-----------------------------------------------------------------------------
+PDB : Pod Discruption Budget The purpose of a PDB is to ensure the availability of critical applications by limiting the number of pod disruptions (e.g., for maintenance or updates) that can occur simultaneously. This helps maintain the desired level of service and stability for applications running in a Kubernetes cluster.
 
-
-
+We require pdb because if we want to give roling update then we want min pods to be running 
+//kubectl set image deployment/nginx-deployment nginx=nginx:1.16.1   <--here we updated the image to 1.16.1 without downing all the pods
 
 
