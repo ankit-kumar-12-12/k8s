@@ -4,3 +4,10 @@
 --kubectl describe pod
 --kubectl get pods -o wide {gives more detail like on which node ip ..}
 --kubectl get pods -o yaml
+--kubectl get pdb {Pod Discruption Budget}
+--kubectl describe deploy <deployment-name>
+--kubectl exec --it <pod-name> 
+--kubectl api-resources {gives the name and short name of all kinds like service svc}
+--kubectl get pods --show-labels
+--kubectl config set-context --current --namespace=dev {in general it gives default ns}
+--kubectl cordon <node-name> {Scheduling Disable} kubectl uncordon <node-name>
