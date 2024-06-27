@@ -73,3 +73,19 @@ We require pdb because if we want to give roling update then we want min pods to
 //kubectl set image deployment/nginx-deployment nginx=nginx:1.16.1   <--here we updated the image to 1.16.1 without downing all the pods
 
 
+------------------------------------------------------------------------------
+Request /Limit
+   Memeory limit == request
+   CPU request (limit not needed Linux CFS Completely Fair Scheduler)
+kind:LimitRange  in this we give resource allocation on the basis of name-space
+QOS Quality of Service Class
+      Guranteed request=limit
+      Burstable request/limit not defined
+      Best Effort nothing defined
+   So when node is draing first best effort pods will be evicted
+   resource{} <-resource section
+------------------------------------------------------------------------------
+kind:ResorceQuota
+   we can define how man pods we can create cpu memory ...
+
+
