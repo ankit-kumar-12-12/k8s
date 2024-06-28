@@ -87,5 +87,30 @@ QOS Quality of Service Class
 ------------------------------------------------------------------------------
 kind:ResorceQuota
    we can define how man pods we can create cpu memory ...
+kind: PriorityClass
+   we can set priority so that our pods we run with high priority so that system will be available 
 
+
+{learn probes} part 6
+*nodeAffinity -- helps to schedule pods on particular node with provided criteria
+
+Taint & Toleration(opposite of nodeAffinity)
+   we apply taint on node 
+      effect -No Schedule : donot schedule on this node
+             -Prefer No Schedule : if nothing available then can schedule
+             -No Execute   :Nothing can be execute on that node
+Or if we want to schedule on a particular node then in spec:
+                                                         nodeName:node01  {it we always schedule on node01}
+
+------------------------------------------------------------------------------
+
+Deployment ==>ReplicaSet ==>Pods
+   Strategy:
+      RollingUpdateStrategy
+      kubectl set image deploy <deployment-name> nginx=nginx:1.16.1 {image:tag} 
+
+      Recreate -->update all pods at once  there is downtime   
+
+      Blue Green                                  {by use the concept of heterogeneous labels}
+      Canary 90% traffic ->v1 10% traffic ->v2
 
