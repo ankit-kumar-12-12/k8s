@@ -10,4 +10,10 @@
 --kubectl api-resources {gives the name and short name of all kinds like service svc}
 --kubectl get pods --show-labels
 --kubectl config set-context --current --namespace=dev {in general it gives default ns}
---kubectl cordon <node-name> {Scheduling Disable} kubectl uncordon <node-name>
+--kubectl cordon <node-name> {Scheduling Disable} kubectl uncordon <node-name> {after this no pod will run on that node}
+--kubectl taint nodes <node-name> app=demo:NoSchedule 
+--kubectl scale deploy <deloyment-name> --replicas 5 {scale up the pods} {if we have to scale down then just mention 4, whatever is the that number of pods were running}
+--kubectl set image deploy <deployment-name> nginx=nginx:1.16.1 {image:tag} 
+--kubectl rollout history deploy/<deployment-name>
+--kubectl rollout status
+--kubectl rollout undo deploy/<deployment-name> --to-revision=1 
