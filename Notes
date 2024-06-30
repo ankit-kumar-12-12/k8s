@@ -114,3 +114,16 @@ Deployment ==>ReplicaSet ==>Pods
       Blue Green                                  {by use the concept of heterogeneous labels}
       Canary 90% traffic ->v1 10% traffic ->v2
 
+
+------------------------------------------------------------------------------
+Config Maps & Secrets
+   
+   ConfigMaps : Non-confidential data 
+   ConfigMapAndSecretsChangeDetectionStrategy -->kubelet setting {immutable = ture , so that we cannot update it only recreate it or delete it }
+
+   Secrets: pull image form pvt repo {learn csi drivers, external secrets operator}
+      multiple types but for docker we use kubernetes.io/dockerconfigjson    ~/.docker/config.json
+      **to get password 
+         -kubectl get secret <secret-name> -oyaml {you will get the password}
+         -echo "<your password>" | base64 -d
+
