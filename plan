@@ -1,3 +1,7 @@
 Deployments
   strategy : Rolling update 
   replicas : 4 so that 50% pods must be up 
+ConfigMap 
+  to store db url and other settings
+StatefulSet 
+  to persist data {but its difficult we have to manage everything }
